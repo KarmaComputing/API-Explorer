@@ -13,6 +13,28 @@ This project is licensed under the AGPL V3 (see NOTICE) and a commercial license
 
 # SETUP
 
+- [Docker Quickstart](#docker-quickstart)
+
+
+## Docker Quickstart
+
+Use the example `.env.example` file.
+```
+cp .env.example .env
+```
+
+Build & run the container
+
+With docker:
+```
+docker build -t api-explorer .
+```
+
+With podman:
+```
+podman build -t api-explorer .
+```
+
 The project is using sbt or Maven 3 as a build tool.
 See build.scala or pom.xml respectively for the dependencies.
 
