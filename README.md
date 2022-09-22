@@ -25,15 +25,23 @@ cp .env.example .env
 
 Build & run the container
 
-With docker:
+
+Build with docker:
 ```
 docker build -t api-explorer .
 ```
 
-With podman:
+Build ith podman:
 ```
 podman build -t api-explorer .
 ```
+
+### Run container
+
+```
+docker run --env-file .env -p 8080:8080 api-explorer
+```
+
 
 The project is using sbt or Maven 3 as a build tool.
 See build.scala or pom.xml respectively for the dependencies.
