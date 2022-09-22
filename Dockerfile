@@ -9,7 +9,7 @@ COPY src/main/resources/container.logback.xml.example src/main/resources/default
 RUN --mount=type=cache,target=/root/.m2 mvn -e -B dependency:resolve
 RUN --mount=type=cache,target=/root/.m2 mvn -e -B package
 
-FROM jetty
+FROM jetty:9
 
 # Copy source from maven build stage
 COPY --from=maven /usr/src/target/API_Explorer-1.0.war /var/lib/jetty/webapps/root.war
