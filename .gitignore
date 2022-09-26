@@ -21,3 +21,4 @@ src/main/webapp/WEB-INF/jetty.xml
 src/main/webapp/conf.html
 target/
 *.iml
+.env
